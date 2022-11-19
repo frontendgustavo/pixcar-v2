@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>Pix Car</title>
+</head>
+
+<body class="background-default">
+    <main class="full-width">
+        <section class="container-start-screen flex flex-center align-center">
+            <section class="box-start-screen">
+                <section class="box-title-ads flex flex-between align-center">
+                    <img src="imgs/star-background-modal.svg" alt="" class="bg-star">
+                    <img src="imgs/logotipo-pixcar.svg" alt="Logo" class="img-start">
+                    <p class="text-ads">Ads Here</p>
+                </section>
+                <section class="box-content">
+                    <section class="box-buttons-start flex flex-column align-center flex-center">
+                        <button class="btn-start btn-entrar flex align-center flex-center">
+                            <img src="imgs/icone-entrar.svg" alt="">
+                            <p>Entrar</p>
+                        </button>
+                        <button class="btn-start btn-criar-conta flex align-center flex-center">
+                            <img src="imgs/icone-criar-conta.svg" alt="">
+                            <p>Criar Conta</p>
+                        </button>
+                    </section>
+                </section>
+            </section>
+        </section>
+
+
+        <!-- Modal Login -->
+        <section id="modal" class="modal modal-login">
+            <!-- MODAL CONTENT LOGIN -->
+            <section class="modal-content modal-content-login flex flex-center align-center">
+                <span class="close btn-entrar-close">
+                    <img src="imgs/icon-close-button.svg" alt="">
+                </span>
+                <section class="box-start-screen">
+                    <section class="box-title-ads flex flex-between align-center">
+                        <img src="imgs/star-background-modal.svg" alt="" class="bg-star">
+                        <img src="imgs/logotipo-pixcar.svg" alt="Logo" class="img-start">
+                        <p class="text-ads">Ads Here</p>
+                    </section>
+                    <section class="box-content">
+                        <h2 class="title-modal">Login</h2>
+                        <form class="box-inputs flex flex-column align-center flex-center">
+                            <input type="email" placeholder="Digite seu e-mail:" required>
+                            <input type="password" placeholder="Digite sua senha:" required>
+                            <button type="submit" class="btn-action-form">Logar</button>
+                        </form>
+                    </section>
+                </section>
+            </section>
+        </section>
+
+        <!-- Modal Criar Conta -->
+        <section id="modal" class="modal modal-criar-conta">
+            <!-- MODAL CONTENT CRIAR CONTA-->
+            <section class="modal-content modal-content-criar-conta flex flex-center align-center">
+                <span class="close btn-criar-conta-close">
+                    <img src="imgs/icon-close-button.svg" alt="">
+                </span>
+                <section class="box-start-screen">
+                    <section class="box-title-ads flex flex-between align-center">
+                        <img src="imgs/star-background-modal.svg" alt="" class="bg-star">
+                        <img src="imgs/img-ads.svg" alt="Logo" class="img-start">
+                        <p class="text-ads">Finalize seu cadastro e participe de premiações semanais.</p>
+                    </section>
+                    <section class="box-content">
+                        <h2 class="title-modal">Faça seu cadastro</h2>
+                        <form class="box-inputs flex flex-column align-center flex-center">
+                            <input type="tel" placeholder="Digite seu celular:" required>
+                            <input type="email" placeholder="Digite seu e-mail:" required>
+                            <input type="password" placeholder="Digite sua senha:" required>
+                            <section class="checkbox-criar-conta flex">
+                                <input type="checkbox">
+                                <p>Declaro que li e concordo com todos os termos de uso da plataforma.</p>
+                            </section>
+                            <button type="submit" class="btn-action-form">Criar conta</button>
+                        </form>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </main>
+
+    <script>
+
+        const btnModalLogin = document.querySelector('.btn-entrar');
+        const btnModalCloseLogin = document.querySelector('.btn-entrar-close');
+        const modalLogin = document.querySelector('.modal-login');
+        
+        const modalCriarConta = document.querySelector('.modal-criar-conta');
+        const btnModalCriarConta = document.querySelector('.btn-criar-conta');
+        const btnModalCloseCriarConta = document.querySelector('.btn-criar-conta-close');
+
+
+        // MODAL LOGIN
+        function abrirModalLogin() {
+            btnModalLogin.addEventListener('click', function(){
+                modalLogin.style.display ='flex';
+                modalLogin.style.alignItems ='center';
+                modalLogin.style.paddingTop = '0px'
+            });
+        }
+        abrirModalLogin();
+
+        function fecharModalLogin() {
+            btnModalCloseLogin.addEventListener('click', function(){
+                modalLogin.style.display ='none'
+            })
+        }
+        fecharModalLogin();
+
+
+        // MODAL CRIAR CONTA
+        function abrirModalCriarConta() {
+            btnModalCriarConta.addEventListener('click', function(){
+                modalCriarConta.style.display ='flex';
+                modalCriarConta.style.alignItems ='center';
+                modalCriarConta.style.paddingTop = '0px'
+            });
+        }
+        abrirModalCriarConta();
+
+        function fecharModalCriarConta() {
+            btnModalCloseCriarConta.addEventListener('click', function(){
+                modalCriarConta.style.display ='none'
+            })
+        }
+        fecharModalCriarConta();
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modalLogin || event.target == modalCriarConta) {
+                modalCriarConta.style.display = "none";
+                modalLogin.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

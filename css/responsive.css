@@ -1,0 +1,160 @@
+@media screen and (min-width:1441px) {
+    .full-width {
+        max-width: 1360px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width:1441px) {
+    .full-width {
+        padding: 0 175px;
+    }
+}
+
+/* ******************* */
+/* ******************* */
+/* ******************* */
+@media screen and (max-width:1024px) {
+    .full-width {
+        padding: 0 64px;
+    }
+}
+/* ******************* */
+/* ******************* */
+/* ******************* */
+@media screen and (max-width:768px) {
+    .full-width {
+        padding: 0 32px;
+    }
+}
+/* ******************* */
+/* ******************* */
+/* ******************* */
+@media screen and (max-width:550px) {
+}
+
+/* ******************* */
+/* ******************* */
+/* ******************* */
+@media screen and (max-width:500px) {
+    .full-width {
+        padding: 0 16px;
+    }
+    .modal-content {
+        margin: auto;
+        position: relative;
+        width: 100%;
+      }
+      .bg-star {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.304));
+        width: 100%;
+    }
+    .title-modal {
+        font-size: 16px;
+    }
+    .btn-action-form { 
+        font-size: 16px;
+    }
+    .checkbox-criar-conta input {
+        width: 20px;
+    }
+    .checkbox-criar-conta p {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    /* MODAIS GAMES */
+.box-btn-add-value {
+    padding: 32px 0;
+}
+.row-line{
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+}
+.btn-add-value {
+    width: 300px;
+    margin: 12px 0;
+}
+.btn-action-add-value {
+    font-size: 16px;
+    width: 90%;
+}
+
+}
+/* ******************* */
+/* ******************* */
+/* ******************* */
+@media screen and (max-width:425px) {
+    .img-start{
+        width: 80px;
+    }
+    .btn-start {
+        cursor: pointer;
+        width: 100%;
+        transform: skew(-20deg);
+        color: #fff;
+        font-weight: 900;
+        font-size: 18px;
+        letter-spacing:1px ;
+        margin: 12px 0; 
+        padding: 16px 0;
+        border-radius: 15px;
+        border: 5px solid var(--border-color);
+    }
+    .text-ads {
+        font-size: 14px;
+    }
+    
+
+}
+/* ******************* */
+/* ******************* */
+/* ******************* */
+@media screen and (max-width:390px) {
+    nav .logo {
+        width: 70px;
+    }
+    .btn-add-money {
+        padding: 0;
+    }
+    .btn-add-money img {
+        margin: 5px 8px;
+        width: 14px;
+    }
+    .btn-saque {
+        padding: 0;
+    }
+    .btn-saque img {
+        margin: 5px 10px;
+        width: 10px;
+    }
+    .btn-profile {
+        padding: 0;
+    }
+    .btn-profile img {
+        margin: 6px 10px;
+        width: 12px;
+    }
+    .info-money {
+        font-size: 14px;
+    }
+    .btn-add-value {
+        width: 250px;
+    }
+}
+/* ******************* */
+/* ******************* */
+/* ******************* */
+@media screen and (min-width:300px) and (max-width:374px){
+
+}
+/* ******************* */
+/* ******************* */
+/* ******************* */
+@media screen and (min-width:375px) and (max-width:424px){
+
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>Pix Car</title>
+</head>
+
+<body class="background-default">
+    <main class="full-width">
+        <header class="header-game">
+            <nav class="flex flex-between align-center nav-game">
+                <img src="imgs/logotipo-pixcar.svg" alt="" class="logo">
+                <section class="flex flex-between align-center">
+                    <section class="box-add-money flex align-center">
+                        <button class="btn-header btn-add-money flex flex-center">
+                            <img src="imgs/add-money.svg" alt="">
+                        </button>
+                        <p class="info-money">R$150,00</p>
+                    </section>
+                    <button class="btn-header btn-saque flex flex-center">
+                        <img src="imgs/icon-saque.svg" alt="">
+                    </button>
+                    <button class="btn-header btn-profile flex flex-center">
+                        <img src="imgs/icon-profile.svg" alt="">
+                    </button>
+                </section>
+            </nav>
+            <hr class="header-bottom">
+        </header>
+
+
+        <!-- Modal Adicionar Valor -->
+        <section id="modal" class="modal modal-add-money">
+            <!-- MODAL CONTENT ADICIONAR DINHEIRO -->
+            <section class="modal-content modal-content-add-money flex flex-center align-center">
+                <span class="close btn-add-money-close">
+                    <img src="imgs/icon-close-button.svg" alt="">
+                </span>
+                <section class="box-start-screen">
+                    <section class="box-title-ads flex flex-between align-center">
+                        <img src="imgs/star-background-modal.svg" alt="" class="bg-star">
+                        <img src="imgs/ads-add-money.png" alt="Logo" width="130px">
+                        <p class="text-ads">Depósitos acima de R$ 100, concorre á um carro 0km</p>
+                    </section>
+                    <section class="box-content">
+                        <h2 class="title-modal">Quanto você deseja adicionar?</h2>
+                        <section class="flex flex-column flex-center align-center box-btn-add-value">
+                            <section class="row-line">
+                                <button class="btn-add-value">R$ 10</button>
+                                <button class="btn-add-value">R$ 30</button>
+                            </section>
+                            <section class="row-line">
+                                <button class="btn-add-value">R$ 50</button>
+                                <button class="btn-add-value">R$ 100</button>
+                            </section>
+                            <button class="btn-action-add-value other-value">Outro valor</button>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </section>
+
+    </main>
+
+    <script>
+        // MODAL ADICIONAR DINHEIRO
+        const btnAddMoney = document.querySelector('.btn-add-money');
+        const btnModalCloseAddMoney = document.querySelector('.btn-add-money-close');
+        const modalAddMoney = document.querySelector('.modal-add-money');
+        function ModalAddMoney() {
+            btnAddMoney.addEventListener('click', function () {
+                modalAddMoney.style.display = 'flex';
+                modalAddMoney.style.alignItems = 'center';
+                modalAddMoney.style.paddingTop = '0px'
+            });
+
+            btnModalCloseAddMoney.addEventListener('click', function () {
+                modalAddMoney.style.display = 'none'
+            })
+        }
+        ModalAddMoney();
+        window.onclick = function (event) {
+            if (event.target == modalAddMoney) {
+                modalAddMoney.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

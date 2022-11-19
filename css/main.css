@@ -1,0 +1,503 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+@font-face {
+    font-family: 'Karibu', sans-serif;
+    src: url(../css/karibu-black-italic.ttf);
+}
+
+body {
+    font-family: 'Karibu', sans-serif !important;
+    font-style: italic;
+}
+
+:root {
+    --primary: #fa0d3b;
+    --secondary: #171717;
+    --green: #3ecb77;
+    --yellow: #f3b62f;
+    --border-color: #3c3c3c;
+    --dark-light: #888888;
+}
+
+/* CONFIGS DEFAULTS */
+.background-default {
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url(../imgs/background-default.png);
+    background-repeat: no-repeat;
+}
+
+.full-width {
+    height: 100vh;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-between {
+    justify-content: space-between;
+}
+
+.flex-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.flex-around {
+    justify-content: space-around;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+
+.container-start-screen {
+    height: 100%;
+}
+
+.box-start-screen {
+    width: 480px;
+    background-color: var(--primary);
+    border-radius: 30px;
+    margin: 16px;
+}
+
+.box-title-ads {
+    padding: 24px;
+    position: relative;
+}
+
+.img-start {
+    width: 100px;
+    z-index: 1;
+}
+
+.text-ads {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    text-align: right;
+    z-index: 1;
+    width: 60%;
+}
+
+.box-content {
+    width: 100%;
+    background-color: var(--secondary);
+    border-radius: 25px;
+    border: 2px solid var(--secondary);
+    position: relative;
+    top: 2px;
+    left: -3px;
+}
+
+button {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.box-buttons-start {
+    padding: 32px 32px;
+}
+
+.box-items-buttons {
+    border: 5px solid var(--b);
+}
+
+.btn-start {
+    cursor: pointer;
+    width: 100%;
+    transform: skew(-20deg);
+    color: #fff;
+    font-weight: 900;
+    font-size: 25px;
+    margin: 12px 0;
+    padding: 22px 0;
+    border-radius: 15px;
+    border: 5px solid var(--border-color);
+}
+
+.btn-start p,
+.btn-start img {
+    transform: skew(20deg);
+}
+
+.btn-start img {
+    width: 30px;
+    margin-right: 16px;
+}
+
+.btn-entrar {
+    background-color: var(--green);
+}
+
+.btn-criar-conta {
+    background-color: var(--yellow);
+}
+
+.bg-star {
+    position: absolute;
+    top:60px;
+    left: 0;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.304));
+    width: 480px;
+}
+
+/* MODAL */
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Black w/ opacity */
+    animation: fadeModal .4s;
+    transition: .4s;
+}
+
+@keyframes fadeModal {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Modal Content */
+.modal-content {
+    margin: auto;
+    position: relative;
+    width: 500px;
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    ;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.close img {
+    width: 45px;
+}
+
+.title-modal {
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    padding-top: 16px;
+    font-weight: 900;
+}
+
+.box-inputs {
+    padding: 10px 32px 40px 32px;
+}
+
+.box-inputs input {
+    width: 100%;
+    padding: 18px 16px;
+    border-radius: 15px;
+    margin: 6px 0;
+    border: none;
+    outline: none;
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+.box-inputs input::placeholder {
+    color: var(--secondary);
+}
+
+.btn-action-form {
+    padding: 10px 0;
+    position: absolute;
+    bottom: -25px;
+    color: #fff;
+    background-color: var(--green);
+    width: 90%;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 900;
+    border: 4px solid var(--border-color);
+}
+
+
+.checkbox-criar-conta {
+    justify-content: flex-start;
+    color: #fff;
+    padding: 12px 0;
+    font-weight: 600;
+}
+
+.checkbox-criar-conta p {
+    width: 70%;
+}
+
+.checkbox-criar-conta input {
+    width: 50px;
+}
+
+input[type="checkbox"i] {
+    position: relative;
+    left: -16px;
+}
+
+
+/* HEADER GAME */
+.header-game {
+    padding-top: 24px;
+    padding-bottom: 12px;
+}
+
+hr.header-bottom {
+    height: 2px;
+    border-radius: 5px;
+    border: none;
+    background: linear-gradient(90deg, #F20C39 0.12%, hwb(348 5% 5% / 0) 100.33%);
+}
+
+nav .logo {
+    width: 90px;
+}
+
+.box-add-money {
+    background-color: #121212;
+    color: #fff;
+    font-weight: 600;
+    justify-content: flex-start;
+    transform: skew(-20deg);
+    border-radius: 5px;
+    padding-right: 16px;
+}
+.btn-add-money {
+    background-color: var(--primary);
+    padding: 6px 10px;
+    border-radius: 5px;
+    margin-right: 8px;
+}
+.btn-add-money img {
+    width: 18px;
+    transform: skew(20deg);
+}
+.info-money {
+    transform: skew(20deg);
+}
+.btn-saque {
+    background-color: var(--primary);
+    transform: skew(-20deg);
+    border-radius: 5px;
+    padding: 4px 12px;
+}
+.btn-saque img {
+    transform: skew(20deg);
+    width: 13px;
+}
+.btn-profile {
+    background-color: var(--yellow);
+    transform: skew(-20deg);
+    border-radius: 5px;
+    padding: 4px 10px;
+}
+.btn-profile img {
+    transform: skew(20deg);
+    width: 17px;
+    position: relative;
+    right: 1px;
+}
+.btn-header {
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+/* MODAIS GAMES */
+.box-btn-add-value {
+    padding: 32px 0;
+}
+.row-line{
+    margin-bottom: 24px;
+}
+.btn-add-value {
+    cursor: pointer;
+    width: 170px;
+    background-color:var(--yellow);
+    padding: 16px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 12px;
+    border-radius: 12px;
+    box-shadow:0 0 0 2px var(--dark-light), inset 0 0 0 2px var(--border-color);
+}
+.btn-action-add-value {
+    padding: 16px 0;
+    position: absolute;
+    bottom: -30px;
+    color: #fff;
+    margin: 0 auto;
+    background-color: var(--green);
+    width: 80%;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 900;
+    box-shadow:0 0 0 1px var(--dark-light), inset 0 0 0 3px var(--border-color);
+}
