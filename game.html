@@ -83,8 +83,39 @@
                         <h2 class="title-modal">Quanto você deseja adicionar?</h2>
                         <section class="box-btn-other-value">
                             <form action="" class="flex flex-column flex-center align-center">
-                                <input type="text" placeholder="Digite o valor" class="money-input" maxlength="10">
+                                <input type="text" placeholder="Digite o valor" class="money-input" maxlength="11">
                                 <button type="submit" class="btn-action-add-value">Adicionar valor</button>
+                            </form>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </section>
+
+         <!-- Modal Adicionar SAQUE -->
+         <section id="modal" class="modal modal-saque">
+            <!-- MODAL CONTENT ADICIONAR SAQUE -->
+            <section class="modal-content modal-content-saque flex flex-center align-center">
+                <span class="close btn-saque-close">
+                    <img src="imgs/icon-close-button.svg" alt="">
+                </span>
+                <section class="box-start-screen">
+                    <section class="box-title-ads flex flex-between align-center">
+                        <img src="imgs/star-background-modal.svg" alt="" class="bg-star">
+                        <img src="imgs/ads-add-money.png" alt="Logo" width="130px">
+                        <p class="text-ads">Depósitos acima de R$ 100, concorre á um carro 0km</p>
+                    </section>
+                    <section class="box-content">
+                        <h2 class="title-modal">Solicitar saque</h2>
+                        <section class="box-btn-saque">
+                            <form action="" class="flex flex-column flex-center align-center">
+                                <p class="info-saque">Disponível Total: <span>R$ 100,00</span></p>
+                                <p class="info-saque green">Disponível Saque: <span>R$ 60,00</span></p>
+                                <label for="">Qual valor deseja sacar?</label>
+                                <input type="text" placeholder="Digite o valor" class="money-input" maxlength="11">
+                                <label for="">Pix para saque</label>
+                                <input type="text" placeholder="Digite o valor" maxlength="32">
+                                <button type="submit" class="btn-action-add-value">Solicitar saque</button>
                             </form>
                         </section>
                     </section>
@@ -103,6 +134,7 @@
     </footer>
 
     <script src="js/main-game.js"></script>
+
     <script>
         // MODAL ADICIONAR DINHEIRO
         const btnAddMoney = document.querySelector('.btn-add-money');
@@ -122,6 +154,7 @@
         ModalAddMoney();
         // #######################################
 
+
         // MODAL ADICIONAR OUTRO VALOR
         const btnOtherValue = document.querySelector('.other-value');
         const btnModalCloseOtherValue = document.querySelector('.btn-other-value-close');
@@ -140,12 +173,23 @@
         ModalAddOtherValue();
         // ####################################
 
-       
-        // window.onclick = function (event) {
-        //     if (event.target == modalAddMoney || event.target == modalOtherValue ) {
-        //         event.style.display = "none";
-        //     }
-        // }
+        // MODAL SAQUE
+        const btnSaque = document.querySelector('.btn-saque');
+        const btnModalCloseSaque = document.querySelector('.btn-saque-close');
+        const modalSaque = document.querySelector('.modal-saque');
+        function ModalSaque() {
+            btnSaque.addEventListener('click', function () {
+                modalSaque.style.display = 'flex';
+                modalSaque.style.alignItems = 'center';
+                modalSaque.style.paddingTop = '0px'
+            });
+
+            btnModalCloseSaque.addEventListener('click', function () {
+                modalSaque.style.display = 'none'
+            });
+        }
+        ModalSaque();
+        // ####################################
     </script>
     <script src="/js/jquery.mask.min.js"></script>
 </body>

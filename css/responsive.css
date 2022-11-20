@@ -112,7 +112,10 @@
         padding: 24px 32px;
         padding-bottom: 52px;
     }
-
+    .box-btn-saque {
+        padding: 10px 32px;
+        padding-bottom: 52px;
+    }
 }
 /* ******************* */
 /* ******************* */
@@ -147,6 +150,16 @@
     }
     .btn-add-value {
         width: 250px;
+    }
+    .box-btn-saque {
+        padding: 10px 16px;
+        padding-bottom: 52px;
+    }
+    .info-saque {
+        font-size: 14px;
+    }
+    .box-btn-saque input {
+        font-size: 14px;
     }
 }
 /* ******************* */
