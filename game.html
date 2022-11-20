@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/jquery-3.6.1.min.js"></script>
     <title>Pix Car</title>
 </head>
 
 <body class="background-default">
-    <main class="full-width">
+    <main class="full-width game-main">
         <header class="header-game">
             <nav class="flex flex-between align-center nav-game">
                 <img src="imgs/logotipo-pixcar.svg" alt="" class="logo">
@@ -65,8 +66,43 @@
             </section>
         </section>
 
-    </main>
+        <!-- Modal Adicionar OUTRO Valor -->
+        <section id="modal" class="modal modal-other-value">
+            <!-- MODAL CONTENT ADICIONAR OUTRO VALOR -->
+            <section class="modal-content modal-content-other-value flex flex-center align-center">
+                <span class="close btn-other-value-close">
+                    <img src="imgs/icon-close-button.svg" alt="">
+                </span>
+                <section class="box-start-screen">
+                    <section class="box-title-ads flex flex-between align-center">
+                        <img src="imgs/star-background-modal.svg" alt="" class="bg-star">
+                        <img src="imgs/ads-add-money.png" alt="Logo" width="130px">
+                        <p class="text-ads">Depósitos acima de R$ 100, concorre á um carro 0km</p>
+                    </section>
+                    <section class="box-content">
+                        <h2 class="title-modal">Quanto você deseja adicionar?</h2>
+                        <section class="box-btn-other-value">
+                            <form action="" class="flex flex-column flex-center align-center">
+                                <input type="text" placeholder="Digite o valor" class="money-input" maxlength="10">
+                                <button type="submit" class="btn-action-add-value">Adicionar valor</button>
+                            </form>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </section>
 
+    </main>
+    <footer>
+        <h3>Todos os direitos reservados.</h3>
+        <section class="termos flex flex-center">
+            <a href="">Política de privacidade</a> 
+            /
+            <a href="">Termos de uso</a>
+        </section>
+    </footer>
+
+    <script src="js/main-game.js"></script>
     <script>
         // MODAL ADICIONAR DINHEIRO
         const btnAddMoney = document.querySelector('.btn-add-money');
@@ -81,15 +117,37 @@
 
             btnModalCloseAddMoney.addEventListener('click', function () {
                 modalAddMoney.style.display = 'none'
-            })
+            });
         }
         ModalAddMoney();
-        window.onclick = function (event) {
-            if (event.target == modalAddMoney) {
-                modalAddMoney.style.display = "none";
-            }
+        // #######################################
+
+        // MODAL ADICIONAR OUTRO VALOR
+        const btnOtherValue = document.querySelector('.other-value');
+        const btnModalCloseOtherValue = document.querySelector('.btn-other-value-close');
+        const modalOtherValue = document.querySelector('.modal-other-value');
+        function ModalAddOtherValue() {
+            btnOtherValue.addEventListener('click', function () {
+                modalOtherValue.style.display = 'flex';
+                modalOtherValue.style.alignItems = 'center';
+                modalOtherValue.style.paddingTop = '0px'
+            });
+
+            btnModalCloseOtherValue.addEventListener('click', function () {
+                modalOtherValue.style.display = 'none'
+            });
         }
+        ModalAddOtherValue();
+        // ####################################
+
+       
+        // window.onclick = function (event) {
+        //     if (event.target == modalAddMoney || event.target == modalOtherValue ) {
+        //         event.style.display = "none";
+        //     }
+        // }
     </script>
+    <script src="/js/jquery.mask.min.js"></script>
 </body>
 
 </html>

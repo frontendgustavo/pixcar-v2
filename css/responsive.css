@@ -71,7 +71,7 @@
     padding: 32px 0;
 }
 .row-line{
-    margin-bottom: 12px;
+    margin-bottom: 0px;
     display: flex;
     flex-direction: column;
 }
@@ -108,7 +108,10 @@
     .text-ads {
         font-size: 14px;
     }
-    
+    .box-btn-other-value {
+        padding: 24px 32px;
+        padding-bottom: 52px;
+    }
 
 }
 /* ******************* */

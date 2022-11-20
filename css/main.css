@@ -146,6 +146,8 @@ body {
     --yellow: #f3b62f;
     --border-color: #3c3c3c;
     --dark-light: #888888;
+    --dark: #121212;
+    --white: #fff;
 }
 
 /* CONFIGS DEFAULTS */
@@ -159,6 +161,7 @@ body {
 .full-width {
     height: 100vh;
 }
+
 
 .h-100 {
     height: 100%;
@@ -213,7 +216,7 @@ body {
 .text-ads {
     font-size: 16px;
     font-weight: 600;
-    color: #fff;
+    color: var(--white);
     text-align: right;
     z-index: 1;
     width: 60%;
@@ -248,7 +251,7 @@ button {
     cursor: pointer;
     width: 100%;
     transform: skew(-20deg);
-    color: #fff;
+    color: var(--white);
     font-weight: 900;
     font-size: 25px;
     margin: 12px 0;
@@ -277,7 +280,7 @@ button {
 
 .bg-star {
     position: absolute;
-    top:60px;
+    top: 60px;
     left: 0;
     filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.304));
     width: 480px;
@@ -342,7 +345,7 @@ button {
 }
 
 .title-modal {
-    color: #fff;
+    color: var(--white);
     font-size: 22px;
     text-align: center;
     padding-top: 16px;
@@ -372,7 +375,7 @@ button {
     padding: 10px 0;
     position: absolute;
     bottom: -25px;
-    color: #fff;
+    color: var(--white);
     background-color: var(--green);
     width: 90%;
     border-radius: 15px;
@@ -384,7 +387,7 @@ button {
 
 .checkbox-criar-conta {
     justify-content: flex-start;
-    color: #fff;
+    color: var(--white);
     padding: 12px 0;
     font-weight: 600;
 }
@@ -422,48 +425,56 @@ nav .logo {
 
 .box-add-money {
     background-color: #121212;
-    color: #fff;
+    color: var(--white);
     font-weight: 600;
     justify-content: flex-start;
     transform: skew(-20deg);
     border-radius: 5px;
     padding-right: 16px;
 }
+
 .btn-add-money {
     background-color: var(--primary);
     padding: 6px 10px;
     border-radius: 5px;
     margin-right: 8px;
 }
+
 .btn-add-money img {
     width: 18px;
     transform: skew(20deg);
 }
+
 .info-money {
     transform: skew(20deg);
 }
+
 .btn-saque {
     background-color: var(--primary);
     transform: skew(-20deg);
     border-radius: 5px;
     padding: 4px 12px;
 }
+
 .btn-saque img {
     transform: skew(20deg);
     width: 13px;
 }
+
 .btn-profile {
     background-color: var(--yellow);
     transform: skew(-20deg);
     border-radius: 5px;
     padding: 4px 10px;
 }
+
 .btn-profile img {
     transform: skew(20deg);
     width: 17px;
     position: relative;
     right: 1px;
 }
+
 .btn-header {
     margin-right: 16px;
     cursor: pointer;
@@ -473,31 +484,95 @@ nav .logo {
 .box-btn-add-value {
     padding: 32px 0;
 }
-.row-line{
+
+.row-line {
     margin-bottom: 24px;
 }
+
 .btn-add-value {
     cursor: pointer;
     width: 170px;
-    background-color:var(--yellow);
+    background-color: var(--yellow);
     padding: 16px;
     font-size: 25px;
     font-weight: 600;
-    color: #fff;
+    color: var(--white);
     margin: 0 12px;
     border-radius: 12px;
-    box-shadow:0 0 0 2px var(--dark-light), inset 0 0 0 2px var(--border-color);
+    box-shadow: 0 0 0 2px var(--dark-light), inset 0 0 0 2px var(--border-color);
 }
+
 .btn-action-add-value {
     padding: 16px 0;
     position: absolute;
     bottom: -30px;
-    color: #fff;
+    color: var(--white);
     margin: 0 auto;
     background-color: var(--green);
     width: 80%;
     border-radius: 15px;
     font-size: 20px;
     font-weight: 900;
-    box-shadow:0 0 0 1px var(--dark-light), inset 0 0 0 3px var(--border-color);
+    box-shadow: 0 0 0 1px var(--dark-light), inset 0 0 0 3px var(--border-color);
 }
+
+.box-btn-other-value {
+    padding: 24px 64px;
+    padding-bottom: 52px;
+}
+
+.box-btn-other-value input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 10px;
+    outline: none;
+    font-weight: 900;
+    color: var(--secondary);
+    border: none;
+    font-size: 16px;
+}
+
+.box-btn-other-value input::placeholder {
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+.modal-other-value {
+    background-color: rgba(0, 0, 0, 0.883);
+    animation: fadeModal .4s;
+    transition: .4s;
+}
+
+
+
+/* FOOTER */
+.game-main {
+    height: 100%;
+    min-height: calc(100vh - 82px);
+}
+
+
+footer {
+    background-color: var(--dark);
+    color: var(--white);
+    text-align: center;
+    padding: 16px 0;
+}
+
+footer h3 {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.termos {
+    margin-top: 16px;
+    color: #a2a2a2;
+}
+
+.termos a {
+    text-decoration: none;
+    color: #a2a2a2;
+    margin: 0 8px;
+    font-weight: 600;
+}
+
