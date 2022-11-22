@@ -591,10 +591,74 @@ nav .logo {
     margin-bottom: 50px;
 }
 
+
+
+.box-btn-profile {
+    padding: 10px 23px;
+    padding-bottom: 32px;
+}
+
+.box-btn-profile input {
+    width: 95%;
+    padding: 12px;
+    margin: 6px 0;
+    border-radius: 10px;
+    outline: none;
+    font-weight: 900;
+    color: var(--secondary);
+    border: none;
+    font-size: 16px;
+    font-style: italic;
+}
+.box-btn-profile label {
+    color: var(--white);
+    text-align: left;
+    align-self: start;
+    margin: 8px 0;
+    font-weight: 500;
+    font-size: 14px;
+}
+.box-btn-profile input:disabled {
+    background-color: #a5a5a5;
+}
+.box-btn-profile input::placeholder {
+    font-weight: 600;
+    color: var(--dark-light);
+}
+.btn-save {
+    padding: 16px 0;
+    position: absolute;
+    bottom: -30px;
+    color: var(--white);
+    margin: 0 auto;
+    background-color: var(--green);
+    width: 90%;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 900;
+    box-shadow: 0 0 0 1px var(--dark-light), inset 0 0 0 3px var(--border-color);
+}
+.btn-logout {
+    padding: 12px 0;
+    color: var(--white);
+    margin: 12px 0;
+    background-color: var(--primary);
+    width: 100%;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 900;
+    box-shadow: 0 0 0 1px var(--dark-light), inset 0 0 0 3px var(--border-color);
+}
+.btn-logout img {
+    width: 25px;
+    position: relative;
+    right: 8px;
+}
+
 /* FOOTER */
 .game-main {
     height: 100%;
-    min-height: calc(100vh - 82px);
+    min-height: calc(100vh - 78px);
 }
 
 footer {

@@ -123,6 +123,40 @@
             </section>
         </section>
 
+        <!-- Modal PROFILE -->
+        <section id="modal" class="modal modal-profile">
+            <!-- MODAL CONTENT PROFILE -->
+            <section class="modal-content modal-content-profile flex flex-center align-center">
+                <span class="close btn-profile-close">
+                    <img src="imgs/icon-close-button.svg" alt="">
+                </span>
+                <section class="box-start-screen">
+                    <section class="box-title-ads flex flex-between align-center">
+                        <img src="imgs/star-background-modal.svg" alt="" class="bg-star">
+                        <img src="imgs/ads-add-money.png" alt="Logo" width="130px">
+                        <p class="text-ads">Depósitos acima de R$ 100, concorre á um carro 0km</p>
+                    </section>
+                    <section class="box-content">
+                        <h2 class="title-modal">Editar seu cadastro</h2>
+                        <section class="box-btn-profile">
+                            <form action="" class="flex flex-column flex-center align-center">
+                                <input type="text" disabled value="Cleiton Silva">
+                                <input type="email" disabled value="cleiton@gmail.com">
+                                <input type="text" disabled value="123.456.789-10" class="cpf-input">
+                                <input type="tel" value="11912345678" class="phone-input">
+                                <input type="password"  placeholder="Digite sua senha antiga:">
+                                <input type="password"  placeholder="Digite sua nova senha:">
+                                <button type="" class="btn-logout flex align-center flex-center">
+                                    <img src="imgs/icon-logout.svg" alt="">
+                                    Sair
+                                </button>
+                                <button type="submit" class="btn-save">Gravar alterações</button>
+                            </form>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </section>
     </main>
     <footer>
         <h3>Todos os direitos reservados.</h3>
@@ -189,6 +223,24 @@
             });
         }
         ModalSaque();
+        // ####################################
+
+        // MODAL PROFILE
+        const btnProfile = document.querySelector('.btn-profile');
+        const btnModalCloseProfile = document.querySelector('.btn-profile-close');
+        const modalProfile = document.querySelector('.modal-profile');
+        function ModalProfile() {
+            btnProfile.addEventListener('click', function () {
+                modalProfile.style.display = 'flex';
+                modalProfile.style.alignItems = 'center';
+                modalProfile.style.paddingTop = '0px'
+            });
+
+            btnModalCloseProfile.addEventListener('click', function () {
+                modalProfile.style.display = 'none'
+            });
+        }
+        ModalProfile();
         // ####################################
     </script>
     <script src="/js/jquery.mask.min.js"></script>

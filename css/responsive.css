@@ -26,6 +26,23 @@
     .full-width {
         padding: 0 32px;
     }
+    footer h3 {
+        font-size: 14px;
+        font-weight: 900;
+    }
+    
+    .termos {
+        margin-top: 16px;
+        color: #a2a2a2;
+    }
+    
+    .termos a {
+        font-size: 12px;
+        text-decoration: none;
+        color: #a2a2a2;
+        margin: 0 8px;
+        font-weight: 600;
+    }
 }
 /* ******************* */
 /* ******************* */
@@ -115,6 +132,13 @@
     .box-btn-saque {
         padding: 10px 32px;
         padding-bottom: 52px;
+    }
+    .box-btn-profile input {
+        padding: 10px;
+    }
+    .box-btn-profile {
+        padding: 10px 16px;
+        padding-bottom: 32px;
     }
 }
 /* ******************* */
