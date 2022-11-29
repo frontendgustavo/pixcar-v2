@@ -453,7 +453,7 @@ nav .logo {
     background-color: var(--primary);
     transform: skew(-20deg);
     border-radius: 5px;
-    padding: 4px 12px;
+    padding: 5px 12px;
 }
 
 .btn-saque img {
@@ -465,10 +465,23 @@ nav .logo {
     background-color: var(--yellow);
     transform: skew(-20deg);
     border-radius: 5px;
-    padding: 4px 10px;
+    padding: 5px 10px;
 }
 
 .btn-profile img {
+    transform: skew(20deg);
+    width: 17px;
+    position: relative;
+    right: 1px;
+}
+.btn-share {
+    background-color: var(--green);
+    transform: skew(-20deg);
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.btn-share img {
     transform: skew(20deg);
     width: 17px;
     position: relative;
@@ -654,6 +667,67 @@ nav .logo {
     position: relative;
     right: 8px;
 }
+
+
+
+
+
+/* FILIATE DASH */
+.container-info-afiliate  {
+    color: var(--white);
+    font-weight:700;
+    padding: 32px 0;
+    
+}
+.box-link-afiliate, .box-value-total {
+    font-size: 20px;
+   flex-wrap: wrap;
+}
+.box-link-afiliate p, .box-value-total p {
+    margin: 10px 0;
+}
+span.bg-red-span {
+    background-color: var(--primary);
+    padding: 12px;
+    margin-right: 5px;
+    border-radius: 10px;
+}
+.box-btn-saque-afiliado {
+    justify-content: flex-end;
+}
+.btn-saque-afiliado {
+    padding: 8px 60px;
+    color: var(--white);
+    background-color: var(--green);
+    font-style: italic;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 900;
+    box-shadow: 0 0 0 1px var(--dark-light), inset 0 0 0 2px var(--border-color);
+}
+.container-table {
+    padding: 32px 0;
+    margin: 32px 0;
+}
+.container-table table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    color: white;
+    background-color: var(--dark);
+    border-radius: 10px;
+  }
+.container-table th {
+    color: var(--dark-light);
+    font-weight: 600;
+    text-align: left;
+    padding: 15px 8px;
+  }
+.container-table td {
+    text-align: left;
+    padding: 15px 8px;
+    color: var(--border-color);
+  }
 
 /* FOOTER */
 .game-main {

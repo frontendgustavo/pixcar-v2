@@ -37,6 +37,57 @@
             <hr class="header-bottom">
         </header>
 
+        <section>
+            <section class="container-info-afiliate flex flex-between align-center">
+                <section class="box-link-afiliate flex flex-between align-center">
+                    <span class="bg-red-span">Link de afiliado:</span> 
+                    <p>http://pixcar.bet/affiliate=as123445sa</p>
+                </section>
+                <section class="box-value-total flex flex-between align-center">
+                    <span class="bg-red-span">Total ganho:</span>
+                    <p>R$100.000,00</p>
+                </section>
+            </section>
+            <section class="flex box-btn-saque-afiliado">
+                <button class="btn-saque-afiliado">Solicitar Saque</button>
+            </section>
+        </section>
+
+        <section class="container-table">
+            <table>
+                <tr>
+                  <th>ID</th>
+                  <th>Email</th>
+                  <th>Valor</th>
+                  <th>Comissão</th>
+                </tr>
+                <tr>
+                  <td>01</td>
+                  <td>juangrimm@gmail.com</td>
+                  <td>R$ 500,00</td>
+                  <td>R$ 50,00</td>
+                </tr>
+                <tr>
+                  <td>01</td>
+                  <td>juangrimm@gmail.com</td>
+                  <td>R$ 500,00</td>
+                  <td>R$ 50,00</td>
+                </tr>
+                <tr>
+                  <td>01</td>
+                  <td>juangrimm@gmail.com</td>
+                  <td>R$ 500,00</td>
+                  <td>R$ 50,00</td>
+                </tr>
+                <tr>
+                  <td>01</td>
+                  <td>juangrimm@gmail.com</td>
+                  <td>R$ 500,00</td>
+                  <td>R$ 50,00</td>
+                </tr>
+              </table>
+        </section>
+
 
         <!-- Modal Adicionar Valor -->
         <section id="modal" class="modal modal-add-money">
@@ -95,8 +146,8 @@
             </section>
         </section>
 
-         <!-- Modal Adicionar SAQUE -->
-         <section id="modal" class="modal modal-saque">
+        <!-- Modal Adicionar SAQUE -->
+        <section id="modal" class="modal modal-saque">
             <!-- MODAL CONTENT ADICIONAR SAQUE -->
             <section class="modal-content modal-content-saque flex flex-center align-center">
                 <span class="close btn-saque-close">
@@ -126,6 +177,36 @@
             </section>
         </section>
 
+        <!-- Modal Adicionar SAQUE AFILIADO-->
+        <section id="modal" class="modal modal-saque-afiliado">
+            <!-- MODAL CONTENT ADICIONAR SAQUE AFILIADO-->
+            <section class="modal-content modal-content-saque-afiliado flex flex-center align-center">
+                <span class="close btn-saque-afiliado-close">
+                    <img src="imgs/icon-close-button.svg" alt="">
+                </span>
+                <section class="box-start-screen">
+                    <section class="box-title-ads flex flex-between align-center">
+                        <img src="imgs/star-background-modal.svg" alt="" class="bg-star">
+                        <img src="imgs/ads-add-money.png" alt="Logo" width="130px">
+                        <p class="text-ads">Depósitos acima de R$ 100, concorre á um carro 0km</p>
+                    </section>
+                    <section class="box-content">
+                        <h2 class="title-modal">Solicitar saque</h2>
+                        <section class="box-btn-saque">
+                            <form action="" class="flex flex-column flex-center align-center">
+                                <p class="info-saque green">Disponível Saque: <span>R$ 20,00</span></p>
+                                <label for="">Qual valor deseja sacar?</label>
+                                <input type="text" placeholder="Digite o valor" class="money-input" maxlength="11">
+                                <label for="">Pix para saque</label>
+                                <input type="text" placeholder="Chave Pix" maxlength="32">
+                                <button type="submit" class="btn-action-add-value btn-solicitar-saque-afiliado">Solicitar saque</button>
+                            </form>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </section>
+
         <!-- Modal PROFILE -->
         <section id="modal" class="modal modal-profile">
             <!-- MODAL CONTENT PROFILE -->
@@ -147,8 +228,8 @@
                                 <input type="email" disabled value="cleiton@gmail.com">
                                 <input type="text" disabled value="123.456.789-10" class="cpf-input">
                                 <input type="tel" value="11912345678" class="phone-input">
-                                <input type="password"  placeholder="Digite sua senha antiga:">
-                                <input type="password"  placeholder="Digite sua nova senha:">
+                                <input type="password" placeholder="Digite sua senha antiga:">
+                                <input type="password" placeholder="Digite sua nova senha:">
                                 <button type="" class="btn-logout flex align-center flex-center">
                                     <img src="imgs/icon-logout.svg" alt="">
                                     Sair
@@ -164,7 +245,7 @@
     <footer>
         <h3>Todos os direitos reservados.</h3>
         <section class="termos flex flex-center">
-            <a href="">Política de privacidade</a> 
+            <a href="">Política de privacidade</a>
             /
             <a href="">Termos de uso</a>
         </section>
@@ -226,6 +307,25 @@
             });
         }
         ModalSaque();
+        // ####################################
+
+
+        // MODAL SAQUE AFILIADO
+        const btnSaqueAfiliado = document.querySelector('.btn-saque-afiliado');
+        const btnModalCloseSaqueAfiliado = document.querySelector('.btn-saque-afiliado-close');
+        const modalSaqueAfiliado = document.querySelector('.modal-saque-afiliado');
+        function ModalSaqueAfiliado() {
+            btnSaqueAfiliado.addEventListener('click', function () {
+                modalSaqueAfiliado.style.display = 'flex';
+                modalSaqueAfiliado.style.alignItems = 'center';
+                modalSaqueAfiliado.style.paddingTop = '0px'
+            });
+
+            btnModalCloseSaqueAfiliado.addEventListener('click', function () {
+                modalSaqueAfiliado.style.display = 'none'
+            });
+        }
+        ModalSaqueAfiliado();
         // ####################################
 
         // MODAL PROFILE
